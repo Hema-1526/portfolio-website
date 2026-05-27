@@ -1,153 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Projects | Hema Portfolio</title>
-
-  <meta name="description"
-    content="View projects developed by Hema including frontend and AI-based applications.">
-
+  <meta name="description" content="View projects developed by Hema including frontend and AI-based applications.">
   <meta name="author" content="Hema">
-
-  <link rel="canonical" href="https://hema-1526.github.io/portfolio-website/projects.html">
-
+  <link rel="canonical" href="https://hema-portfolio.example.com/projects.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Projects | Hema Portfolio">
-  <meta property="og:description"
-    content="View projects developed by Hema including frontend and AI-based applications.">
-
-  <meta property="og:url"
-    content="https://hema-1526.github.io/portfolio-website/projects.html">
-
-  <!-- Google Fonts -->
+  <meta property="og:description" content="View projects developed by Hema including frontend and AI-based applications.">
+  <meta property="og:url" content="https://hema-portfolio.example.com/projects.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin>
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@400;500&display=swap"
-    media="print"
-    onload="this.media='all'">
-
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@400;500&display=swap">
-  </noscript>
-
-  <!-- CSS -->
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap"
+    media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap"></noscript>
   <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
 
-  <!-- Skip Link -->
-  <a href="#main-content" class="skip-link">
-    Skip to Main Content
-  </a>
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-  <!-- Header -->
-  <header role="banner">
-
-    <h1>Hema Portfolio</h1>
-
-    <!-- Navigation -->
-    <nav role="navigation" aria-label="Main Navigation">
-
-      <ul>
-        <li><a href="index.html">Home</a></li>
-
-        <li><a href="about.html">About</a></li>
-
-        <li>
-          <a href="projects.html" aria-current="page">
-            Projects
-          </a>
-        </li>
-
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-
-    </nav>
-
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="site-logo" aria-label="Hema Portfolio — Home">Hema<span>.</span></a>
+        <div class="header-right">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main Navigation">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html" aria-current="page">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+            <div class="toggle-track" aria-hidden="true"><div class="toggle-knob"></div></div>
+            <span class="toggle-label">Dark</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <!-- Main Content -->
   <main id="main-content" role="main">
 
-    <div class="page-wrapper">
-
-      <!-- Hero -->
-      <div class="page-hero">
-
-        <p class="section-label">Work</p>
-
-        <h2>My Projects</h2>
-
+    <div class="page-banner">
+      <div class="container">
+        <div class="page-banner-inner">
+          <div>
+            <p class="section-label">Work</p>
+            <h2>My Projects</h2>
+            <p>A selection of things I have built.</p>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <!-- Projects Section -->
-      <section aria-labelledby="projects-heading">
-
+    <!-- Projects — 3-col CSS Grid -->
+    <section aria-labelledby="projects-heading" class="section-pad">
+      <div class="container">
         <p class="section-label">Featured</p>
-
-        <h2 id="projects-heading" class="section-h2-md">
-          Selected Work
-        </h2>
+        <h2 id="projects-heading" class="section-heading">Selected Work</h2>
 
         <div class="projects-grid">
 
-          <!-- Project 1 -->
-          <article class="project-card">
-
-            <span class="project-number" aria-hidden="true">
-              01
-            </span>
-
-            <h3>AI-Based Cataract Detection</h3>
-
-            <p>
-              Developed a machine learning project to detect cataracts
-              using image processing techniques.
-            </p>
-
+          <article class="project-card animate-up">
+            <div class="project-card-header">
+              <span class="project-number" aria-hidden="true">01</span>
+              <span class="project-tag">ML / AI</span>
+            </div>
+            <div class="project-card-body">
+              <h3>AI-Based Cataract Detection</h3>
+              <p>
+                Developed a machine learning project to detect cataracts
+                using image processing techniques.
+              </p>
+            </div>
+            <div class="project-card-footer">
+             
+            </div>
           </article>
 
-          <!-- Project 2 -->
-          <article class="project-card">
-
-            <span class="project-number" aria-hidden="true">
-              02
-            </span>
-
-            <h3>Responsive Portfolio Website</h3>
-
-            <p>
-              Built a responsive personal portfolio using HTML5 and CSS3.
-            </p>
-
+          <article class="project-card animate-up">
+            <div class="project-card-header">
+              <span class="project-number" aria-hidden="true">02</span>
+              <span class="project-tag">Frontend</span>
+            </div>
+            <div class="project-card-body">
+              <h3>Responsive Portfolio Website</h3>
+              <p>
+                Built a responsive personal portfolio using HTML5 and CSS3.
+              </p>
+            </div>
+            <div class="project-card-footer">
+              
+            </div>
           </article>
 
+          
         </div>
-
-      </section>
-
-    </div>
+      </div>
+    </section>
 
   </main>
 
-  <!-- Footer -->
-  <footer role="contentinfo">
-
-    <p>&copy; 2026 Hema Portfolio</p>
-
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">&copy; 2026 Hema Portfolio. All rights reserved.</p>
+        <nav aria-label="Footer Navigation">
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </footer>
 
+  <script src="theme.js"></script>
 </body>
-
 </html>

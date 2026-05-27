@@ -1,102 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Contact | Hema Portfolio</title>
-
-  <meta name="description"
-    content="Contact Hema through this accessible portfolio contact form.">
+  <meta name="description" content="Contact Hema through this accessible portfolio contact form.">
   <meta name="author" content="Hema">
-
   <link rel="canonical" href="https://hema-portfolio.example.com/contact.html">
-  <meta property="og:type"        content="website">
-  <meta property="og:title"       content="Contact | Hema Portfolio">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact | Hema Portfolio">
   <meta property="og:description" content="Contact Hema through this accessible portfolio contact form.">
-  <meta property="og:url"         content="https://hema-portfolio.example.com/contact.html">
-
+  <meta property="og:url" content="https://hema-portfolio.example.com/contact.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap"
     media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@400;500&display=swap"></noscript>
-
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap"></noscript>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
   <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-  <header role="banner">
-    <h1>Hema Portfolio</h1>
-    <nav role="navigation" aria-label="Main Navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html" aria-current="page">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="site-logo" aria-label="Hema Portfolio — Home">Hema<span>.</span></a>
+        <div class="header-right">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main Navigation">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+          </nav>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+            <div class="toggle-track" aria-hidden="true"><div class="toggle-knob"></div></div>
+            <span class="toggle-label">Dark</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main id="main-content" role="main">
-    <div class="page-wrapper">
 
-      <div class="page-hero">
-        <p class="section-label">Reach Out</p>
-        <h2>Contact Me</h2>
+    <div class="page-banner">
+      <div class="container">
+        <div class="page-banner-inner">
+          <div>
+            <p class="section-label">Reach Out</p>
+            <h2>Contact Me</h2>
+            <p>Let's build something accessible and beautiful together.</p>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <section aria-labelledby="contact-heading">
-        <h2 id="contact-heading" class="sr-only">Get In Touch</h2>
+    <!-- Contact — 2-col CSS Grid: info | form -->
+    <section aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
 
-        <div class="contact-layout">
-
-          <div class="contact-info">
+          <!-- Info column -->
+          <div class="contact-info-col animate-up">
             <p class="section-label">Get In Touch</p>
+            <h2 id="contact-heading" class="section-subheading">Let's talk</h2>
             <p>Fill out the form below to contact me.</p>
+
+            <div class="contact-detail" aria-label="Contact details">
+              
+              <div class="contact-item">
+                <span class="contact-item-icon" aria-hidden="true">📍</span>
+                <span>Chennai, Tamil Nadu, India</span>
+              </div>
+            </div>
           </div>
 
-          <form aria-label="Contact Form" novalidate>
+          <!-- Form column -->
+          <div class="animate-up">
+            <form class="contact-form" aria-label="Contact Form" novalidate>
 
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name"
-                autocomplete="name" placeholder="Your name"
-                required aria-required="true">
-            </div>
+              <!-- Two inputs in a CSS Grid row -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name"
+                    autocomplete="name" placeholder="Your name"
+                    required aria-required="true">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email"
+                    autocomplete="email" placeholder="you@example.com"
+                    required aria-required="true">
+                </div>
+              </div>
 
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email"
-                autocomplete="email" placeholder="you@example.com"
-                required aria-required="true">
-            </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6"
+                  placeholder="What's on your mind?"
+                  required aria-required="true"></textarea>
+              </div>
 
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="6"
-                placeholder="What's on your mind?"
-                required aria-required="true"></textarea>
-            </div>
+              <div class="form-submit">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <span class="form-note">* All fields are required</span>
+              </div>
 
-            <button type="submit">Send Message</button>
-
-          </form>
+            </form>
+          </div>
 
         </div>
-      </section>
+      </div>
+    </section>
 
-    </div>
   </main>
 
-  <footer role="contentinfo">
-    <p>&copy; 2026 Hema Portfolio</p>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">&copy; 2026 Hema Portfolio. All rights reserved.</p>
+        <nav aria-label="Footer Navigation">
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </footer>
 
+  <script src="theme.js"></script>
 </body>
 </html>
